@@ -117,16 +117,16 @@ subgraph = G.subgraph(group_ids)
 # Оценка центральности по посредничеству
 betweenness_centrality = nx.betweenness_centrality(subgraph)
 print("Центральность по посредничеству:")
-print(центральность по посредничеству)
+print(betweenness_centrality)
 
 # Оценка центральности по близости
 closeness_centrality = nx.closeness_centrality(subgraph)
 print("Центральность по близости:")
-print(центральность по близости)
+print(closeness_centrality)
 
 # Оценка центральности по собственному вектору
 eigenvector_centrality = nx.eigenvector_centrality(subgraph)
 print("Центральность по собственному вектору:")
-print(центральность по собственному вектору)
+print(eigenvector_centrality)
 
 plt.show()
