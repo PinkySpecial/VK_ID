@@ -108,19 +108,25 @@ for edge in G.edges:
 # Установка расположения и заголовка
 #fig.update_layout(title='Граф друзей и их друзей')
 
+# Группа идентификаторов для расчета центральностей
+group_ids = ['224364474', '256804252', '212487510', '531619927', '194848002', '381907905', '444639273', '308412461', '308412461', '232210943', '75785096', '112370537', '236783753', '266095500', '383087847', '146697287', '315590903', '54705450', '139939428', '461814307', '143661083', '260727197', '276581495', '163067034', '184267947']
+
+# Создание подграфа с вершинами только по группе
+subgraph = G.subgraph(group_ids)
+
 # Оценка центральности по посредничеству
-betweenness_centrality = nx.betweenness_centrality(G)
+betweenness_centrality = nx.betweenness_centrality(subgraph)
 print("Центральность по посредничеству:")
-print(betweenness_centrality)
+print(центральность по посредничеству)
 
 # Оценка центральности по близости
-closeness_centrality = nx.closeness_centrality(G)
+closeness_centrality = nx.closeness_centrality(subgraph)
 print("Центральность по близости:")
-print(closeness_centrality)
+print(центральность по близости)
 
 # Оценка центральности по собственному вектору
-eigenvector_centrality = nx.eigenvector_centrality(G)
+eigenvector_centrality = nx.eigenvector_centrality(subgraph)
 print("Центральность по собственному вектору:")
-print(eigenvector_centrality)
+print(центральность по собственному вектору)
 
 plt.show()
