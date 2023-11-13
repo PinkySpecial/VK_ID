@@ -108,4 +108,19 @@ for edge in G.edges:
 # Установка расположения и заголовка
 #fig.update_layout(title='Граф друзей и их друзей')
 
+# Оценка центральности по посредничеству
+betweenness_centrality = nx.betweenness_centrality(G)
+print("Центральность по посредничеству:")
+print(betweenness_centrality)
+
+# Оценка центральности по близости
+closeness_centrality = nx.closeness_centrality(G)
+print("Центральность по близости:")
+print(closeness_centrality)
+
+# Оценка центральности по собственному вектору
+eigenvector_centrality = nx.eigenvector_centrality(G)
+print("Центральность по собственному вектору:")
+print(eigenvector_centrality)
+
 plt.show()
